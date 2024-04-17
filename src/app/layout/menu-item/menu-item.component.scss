@@ -36,7 +36,43 @@ a {
 
   &.home {
     &::before {
-      // background: url('./../../../assets/icons/home.svg') center center no-repeat;
+      background: url('./../../../assets/icons/home.svg') center center no-repeat;
+    }
+  }
+
+  &.people {
+    &::before {
+      background: url('./../../../assets/icons/people.svg') center center no-repeat;
+    }
+  }
+
+  &.planets {
+    &::before {
+      background: url('./../../../assets/icons/planets.svg') center center no-repeat;
+    }
+  }
+
+  &.films {
+    &::before {
+      background: url('./../../../assets/icons/films.svg') center center no-repeat;
+    }
+  }
+
+  &.species {
+    &::before {
+      background: url('./../../../assets/icons/species.svg') center center no-repeat;
+    }
+  }
+
+  &.starships {
+    &::before {
+      background: url('./../../../assets/icons/starships.svg') center center no-repeat;
+    }
+  }
+
+  &.vehicles {
+    &::before {
+      background: url('./../../../assets/icons/vehicles.svg') center center no-repeat;
     }
   }
 }
