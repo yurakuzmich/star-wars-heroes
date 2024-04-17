@@ -1,10 +1,18 @@
 <h2>{{ title }}</h2>
 
-<div class="people">
-  @for(swhero of people; track swhero.name) {
-    <app-swhero-card [hero]="swhero"></app-swhero-card>
-  } @empty {
-    <p>There are no SW Heroes</p>
-  }
-</div>
+@if (loading) {
+  Loading heroes...
+} @else if (error) {
+  Error while heroes loading...
+} @else {
+  <div class="people">
+    @for(swhero of people; track swhero.name) {
+      <app-swhero-card [hero]="swhero"></app-swhero-card>
+    } @empty {
+      <p>There are no SW Heroes</p>
+    }
+  </div>
+}
+
+
 
