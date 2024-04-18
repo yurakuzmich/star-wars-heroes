@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { SWPlanet } from '../../models';
 
 @Component({
   selector: 'app-planet-card',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './planet-card.component.scss'
 })
 export class PlanetCardComponent {
-
+  @Input() planet!: SWPlanet;
 }

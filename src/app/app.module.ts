@@ -16,7 +16,7 @@ import { provideHttpClient } from '@angular/common/http';
     SidebarComponent,
     MenuItemComponent,
     MainMenuComponent,
-    MainPageComponent
+    MainPageComponent,
   ],
   imports: [
     BrowserModule,

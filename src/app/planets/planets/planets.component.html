@@ -1,1 +1,16 @@
-<p>planets works!</p>
+<h2>{{ title }}</h2>
+
+@if (loading) {
+  Loading planets...
+} @else if (error) {
+  Error while planets loading...
+} @else {
+  <div class="planets">
+    @for(planet of planets; track planet.name) {
+      <app-planet-card [planet]="planet"></app-planet-card>
+    } @empty {
+      <p>There are no Planets</p>
+    }
+  </div>
+}
+
