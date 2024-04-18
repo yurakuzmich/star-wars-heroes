@@ -1,1 +1,15 @@
-<p>species works!</p>
+<h2>{{ title }}</h2>
+
+@if (loading) {
+  Loading species...
+} @else if (error) {
+  Error while species loading...
+} @else {
+  <div class="species">
+    @for(speciesItem of species; track speciesItem.name) {
+      <app-item-card [item]="speciesItem" [fields]="fields"></app-item-card>
+    } @empty {
+      <p>There are no SW Heroes</p>
+    }
+  </div>
+}

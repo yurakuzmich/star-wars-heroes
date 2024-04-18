@@ -1,1 +1,15 @@
-<p>starships works!</p>
+<h2>{{ title }}</h2>
+
+@if (loading) {
+  Loading starships...
+} @else if (error) {
+  Error while starships loading...
+} @else {
+  <div class="starship">
+    @for(starship of starships; track starship.name) {
+      <app-item-card [item]="starship" [fields]="fields"></app-item-card>
+    } @empty {
+      <p>There are no SW starships</p>
+    }
+  </div>
+}

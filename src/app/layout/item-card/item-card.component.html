@@ -2,4 +2,8 @@
   <h2>
     {{ title }}
   </h2>
+
+  @for(field of fields; track field.fieldName) {
+    <p>{{ field.title }}: {{ item[field.fieldName] }}</p>
+  }
 </div>

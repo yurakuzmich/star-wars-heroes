@@ -6,3 +6,9 @@ import { SWStarship } from "./starship.model";
 import { SWVehicle } from "./vehicle.model";
 
 export type SWItem = SWHero | SWPlanet | SWFilm | SWSpecies | SWVehicle | SWStarship;
+
+export interface SWItemCardField {
+  title: string;
+  fieldName: string;
+  style?: string;
+}

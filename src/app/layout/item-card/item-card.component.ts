@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { SWItem } from '../../models';
+import { SWItem, SWItemCardField } from '../../models';
 import { SWFilm } from '../../models';
 
 @Component({
@@ -10,7 +10,8 @@ import { SWFilm } from '../../models';
 })
 
 export class ItemCardComponent {
-  @Input() item!: SWItem;
+  @Input() item!: any; //TODO find a way to awoid any.
+  @Input() fields: SWItemCardField[] = [];
 
   title!: string;
 

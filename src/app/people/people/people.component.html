@@ -7,7 +7,7 @@
 } @else {
   <div class="people">
     @for(swhero of people; track swhero.name) {
-      <app-swhero-card [hero]="swhero"></app-swhero-card>
+      <app-item-card [item]="swhero" [fields]="fields"></app-item-card>
     } @empty {
       <p>There are no SW Heroes</p>
     }

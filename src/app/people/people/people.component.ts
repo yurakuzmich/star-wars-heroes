@@ -3,6 +3,7 @@ import { SWHero } from '../../models/people.model';
 import { Subscription } from 'rxjs';
 import { ApiService } from '../../services/api.service';
 import { ApiResources } from '../../models/api-resources';
+import { SWItemCardField } from '../../models';
 
 @Component({
   selector: 'app-people',
@@ -15,6 +16,24 @@ export class PeopleComponent implements OnInit, OnDestroy {
   public people: SWHero[] = [];
   public loading = true;
   public error = false;
+  public fields: SWItemCardField[] = [
+    {
+      title: 'Name',
+      fieldName: 'name',
+    },
+    {
+      title: 'Birth Year',
+      fieldName: 'birth_year',
+    },
+    {
+      title: 'Gender',
+      fieldName: 'gender',
+    },
+    {
+      title: 'Height',
+      fieldName: 'height',
+    }
+  ];
   private APISubscription!: Subscription;
 
   constructor(private apiService: ApiService) { }

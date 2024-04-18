@@ -1,1 +1,15 @@
-<p>films works!</p>
+<h2>{{ title }}</h2>
+
+@if (loading) {
+  Loading films...
+} @else if (error) {
+  Error while films loading...
+} @else {
+  <div class="films">
+    @for(film of films; track film.title) {
+      <app-item-card [item]="film" [fields]="fields"></app-item-card>
+    } @empty {
+      <p>There are no SW Heroes</p>
+    }
+  </div>
+}

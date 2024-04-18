@@ -1,1 +1,15 @@
-<p>vehicles works!</p>
+<h2>{{ title }}</h2>
+
+@if (loading) {
+  Loading vehicles...
+} @else if (error) {
+  Error while vehicles loading...
+} @else {
+  <div class="vehicle">
+    @for(vehicle of vehicles; track vehicle.name) {
+      <app-item-card [item]="vehicle" [fields]="fields"></app-item-card>
+    } @empty {
+      <p>There are no SW Vehicles</p>
+    }
+  </div>
+}
