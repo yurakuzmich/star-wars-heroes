@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { SWHero } from '../../models/people.model';
+import { SWHero, SWPeople } from '../../models/people.model';
 import { Subscription } from 'rxjs';
 import { ApiService } from '../../services/api.service';
 import { ApiResources } from '../../models/api-resources';
@@ -16,7 +16,7 @@ export class PeopleComponent implements OnInit, OnDestroy {
   public people: SWHero[] = [];
   public loading = true;
   public error = false;
-  public fields: SWItemCardField[] = [
+  public fields: Array<SWItemCardField<SWHero>> = [
     {
       title: 'Name',
       fieldName: 'name',

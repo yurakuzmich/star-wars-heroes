@@ -14,7 +14,7 @@ export class PlanetsComponent {
   public planets: SWPlanet[] = [];
   public loading = true;
   public error = false;
-  public fields: SWItemCardField[] = [
+  public fields: Array<SWItemCardField<SWPlanet>> = [
     {
       title: 'Name',
       fieldName: 'name',

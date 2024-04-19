@@ -13,7 +13,7 @@ export class StarshipsComponent {
   public starships: SWStarship[] = [];
   public loading = true;
   public error = false;
-  public fields: SWItemCardField[] = [
+  public fields: Array<SWItemCardField<SWStarship>> = [
     {
       title: 'Model',
       fieldName: 'model',

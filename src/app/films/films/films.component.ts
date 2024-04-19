@@ -13,7 +13,7 @@ export class FilmsComponent {
   public films: SWFilm[] = [];
   public loading = true;
   public error = false;
-  public fields: SWItemCardField[] = [
+  public fields: Array<SWItemCardField<SWFilm>> = [
     {
       title: 'Episode ID',
       fieldName: 'episode_id',

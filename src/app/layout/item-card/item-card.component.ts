@@ -9,9 +9,9 @@ import { SWFilm } from '../../models';
   styleUrl: './item-card.component.scss'
 })
 
-export class ItemCardComponent {
-  @Input() item!: any; //TODO find a way to awoid any.
-  @Input() fields: SWItemCardField[] = [];
+export class ItemCardComponent <T extends SWItem> {
+  @Input() item!: T; //TODO find a way to awoid any.
+  @Input() fields: Array<SWItemCardField<T>> = [];
 
   title!: string;
 

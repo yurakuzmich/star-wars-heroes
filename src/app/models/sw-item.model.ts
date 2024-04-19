@@ -7,8 +7,8 @@ import { SWVehicle } from "./vehicle.model";
 
 export type SWItem = SWHero | SWPlanet | SWFilm | SWSpecies | SWVehicle | SWStarship;
 
-export interface SWItemCardField {
+export interface SWItemCardField<T> {
   title: string;
-  fieldName: string;
+  fieldName: keyof T;
   style?: string;
 }

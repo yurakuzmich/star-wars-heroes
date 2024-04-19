@@ -13,7 +13,7 @@ export class SpeciesComponent {
   public species: SWSpecies[] = [];
   public loading = true;
   public error = false;
-  public fields: SWItemCardField[] = [
+  public fields: Array<SWItemCardField<SWSpecies>> = [
     {
       title: 'Name',
       fieldName: 'name',

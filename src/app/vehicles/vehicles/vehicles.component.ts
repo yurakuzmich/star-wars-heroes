@@ -13,7 +13,7 @@ export class VehiclesComponent {
   public vehicles: SWVehicle[] = [];
   public loading = true;
   public error = false;
-  public fields: SWItemCardField[] = [
+  public fields: Array<SWItemCardField<SWVehicle>> = [
     {
       title: 'Name',
       fieldName: 'name',
