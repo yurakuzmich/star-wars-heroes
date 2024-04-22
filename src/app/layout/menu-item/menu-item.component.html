@@ -1,3 +1,8 @@
-<a [routerLink]="props.link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" [ngClass]="props.class">
+<a
+  [routerLink]="props.link"
+  routerLinkActive="active"
+  [routerLinkActiveOptions]="{ exact: true }"
+  [ngClass]="props.class" (click)="onClick()"
+  #menuLink>
   {{ props.title }}
 </a>
