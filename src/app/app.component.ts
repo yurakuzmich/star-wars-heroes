@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'star-wars-app';
+
+  isUserLoggedIn = false;
+  isUserLoggedIn$!: Observable<boolean>;
+  isUserLoggedInSubscription!: Subscription;
 }

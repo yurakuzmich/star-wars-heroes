@@ -12,6 +12,9 @@ import { MainMenuComponent } from './layout/main-menu/main-menu.component';
 import { PeopleModule } from './people/people.module';
 import { MainPageComponent } from './layout/main-page/main-page.component';
 import { provideHttpClient } from '@angular/common/http';
+import { LoginComponent } from './layout/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ButtonComponent } from './layout/button/button.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +23,15 @@ import { provideHttpClient } from '@angular/common/http';
     MenuItemComponent,
     MainMenuComponent,
     MainPageComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     PeopleModule,
+    ReactiveFormsModule,
+    ButtonComponent,
   ],
   providers: [
     provideHttpClient(),

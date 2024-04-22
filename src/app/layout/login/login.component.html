@@ -1,0 +1,24 @@
+<div class="wrapper">
+  <div class="login">
+    <div class="login_logo">
+      <img src="assets/login-bg.jpg" alt="">
+    </div>
+    <div class="login_form">
+      <h2>
+        Starauth
+      </h2>
+      <form action="" [formGroup]="loginForm">
+        <div>
+          <input type="email" name="username" placeholder="Starmail" formControlName="username">
+          <p *ngIf="usernameControl.touched && usernameControl.invalid">Enter your starmail address</p>
+        </div>
+        <div>
+          <input type="password" name="password" placeholder="Pass or tentacle print" formControlName="password" autocomplete="current-password">
+          <p *ngIf="passwordControl.touched && passwordControl.invalid">Password</p>
+        </div>
+        <app-button label="Enter the system" button-style="dark-blue" (click)="submitLogin($event)"></app-button>
+      </form>
+    </div>
+  </div>
+</div>
+
