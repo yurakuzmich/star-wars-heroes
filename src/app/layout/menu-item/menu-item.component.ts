@@ -21,6 +21,6 @@ export class MenuItemComponent {
 
   onClick() {
     this.isSelected = !this.isActive();
-    console.log(this.isSelected);
+    // console.log(this.isSelected);
   }
 }

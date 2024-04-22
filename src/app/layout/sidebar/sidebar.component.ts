@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuItem } from '../../models/menu-item.model';
+import { LoginService } from '../../services/login.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -14,5 +15,9 @@ export class SidebarComponent {
     label: null,
   };
 
-  logOut () {}
+  constructor(private loginService: LoginService) {}
+
+  logOut() {
+    this.loginService.logOut();
+  }
 }

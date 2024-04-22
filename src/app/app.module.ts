@@ -15,6 +15,9 @@ import { provideHttpClient } from '@angular/common/http';
 import { LoginComponent } from './layout/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ButtonComponent } from './layout/button/button.component';
+import { StoreModule } from '@ngrx/store';
+import { appReducer } from './state/reducer';
+import { AccessDeniedComponent } from './layout/access-denied/access-denied.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,7 @@ import { ButtonComponent } from './layout/button/button.component';
     MainMenuComponent,
     MainPageComponent,
     LoginComponent,
+    AccessDeniedComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +36,7 @@ import { ButtonComponent } from './layout/button/button.component';
     PeopleModule,
     ReactiveFormsModule,
     ButtonComponent,
+    StoreModule.forRoot({ app: appReducer }),
   ],
   providers: [
     provideHttpClient(),

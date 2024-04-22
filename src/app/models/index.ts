@@ -9,4 +9,5 @@ export * from './species.model';
 export * from './vehicle.model';
 export * from './starship.model';
 export * from './sw-item.model';
+export * from './user';
 
