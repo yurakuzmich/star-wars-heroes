@@ -6,3 +6,23 @@
   align-items: flex-start;
   justify-content: space-around;
 }
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  &_element {
+    text-decoration: none;
+    font-weight: bold;
+    color: red;
+
+    &_disabled {
+      pointer-events: none;
+      opacity: 0.2;
+    }
+  }
+}
+

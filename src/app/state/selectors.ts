@@ -24,3 +24,8 @@ export const selectUser = (userId: number) => createSelector(
   (users: User[]) => users.find(user => user.id === userId)
 );
 
+export const selectAllState = () => createSelector(
+  selectAppState,
+  (state: AppState) => state
+);
+

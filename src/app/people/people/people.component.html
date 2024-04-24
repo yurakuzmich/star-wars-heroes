@@ -12,7 +12,11 @@
       <p>There are no SW Heroes</p>
     }
   </div>
+  @if(people.length) {
+    <div class="pagination">
+      <a href="" class="pagination_element" [ngClass]="{ 'pagination_element_disabled': (currentPage === 0)}" (click)="goPreviousPage($event)">PreV</a>
+      <p>{{ currentPage + 1 }}</p>
+      <a href="" class="pagination_element" [ngClass]="{ 'pagination_element_disabled': (isLastPage === true)}" (click)="goNextPage($event)">NexT</a>
+    </div>
+  }
 }
-
-
-

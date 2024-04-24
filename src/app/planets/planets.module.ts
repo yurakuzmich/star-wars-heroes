@@ -5,8 +5,6 @@ import { PlanetsComponent } from './planets/planets.component';
 import { PlanetsRoutingModule } from './planets-routing.module';
 import { ItemCardComponent } from '../layout/item-card/item-card.component';
 
-
-
 @NgModule({
   declarations: [
     PlanetComponent,

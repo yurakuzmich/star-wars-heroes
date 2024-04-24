@@ -18,6 +18,7 @@ import { ButtonComponent } from './layout/button/button.component';
 import { StoreModule } from '@ngrx/store';
 import { appReducer } from './state/reducer';
 import { AccessDeniedComponent } from './layout/access-denied/access-denied.component';
+import { CurrentUserComponent } from './layout/current-user/current-user.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { AccessDeniedComponent } from './layout/access-denied/access-denied.comp
     MainPageComponent,
     LoginComponent,
     AccessDeniedComponent,
+    CurrentUserComponent,
   ],
   imports: [
     BrowserModule,
